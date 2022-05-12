@@ -21,6 +21,7 @@
 input {
     border: none;
     border-bottom: 1px solid lightgrey;
+    outline: none;
 }
 
 @font-face {
@@ -31,7 +32,7 @@ input {
 }
 
 body {
-    font-family: Adobe clean;
+    font-family: Adobe clean, sans-serif;
 }
 
 .heading {
@@ -45,6 +46,8 @@ body {
 img {
     height: 60px;
     margin-left: -9px;
+    margin-top: -20px;
+    margin-bottom: 8px;
 }
 input {
     padding-left: 1px;
@@ -80,6 +83,8 @@ select {
 
 .birthday {
     margin: 10px 0px;
+    color: #505050;
+    margin-top: 15px;
 }
 
 #day, #year {
@@ -112,21 +117,30 @@ button {
     border: none;
     font-size: 14px;
     margin: 20px 0px;
+    cursor: pointer;
 }
 
 .inform, .register, .emailcheckbox {
     font-size: 14px;
     color: #505050;
+    line-height: 20px;
 }
 
 .emailcheckbox {
     margin-left: 8px;
+    margin-top: 4px;
 }
 
 .e-check {
     display: flex;
-    align-items: center;
-    height: 20px;
-    margin: 20px 0px;
+    align-items: top;
+    margin: 10px 0px;
 }
+
+button:hover {
+    background-color: #1564c5;
+
+}
+
+
 
