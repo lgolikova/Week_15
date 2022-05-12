@@ -60,7 +60,7 @@ input {
     width: 48%;
 }
 
-#name {
+#name, #day, #month {
     margin-right: 12px;
 }
 
@@ -75,4 +75,58 @@ select {
 #country, #day, #month, #year {
     border: none;
     border-bottom: 1px solid lightgrey;
+    
 }
+
+.birthday {
+    margin: 10px 0px;
+}
+
+#day, #year {
+    width: 25%;
+    color: #626262d6;
+    font-style: italic;
+    font-size: 14px;
+}
+
+#month {
+    width: 42%;
+    color: #626262d6;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #1473e6;
+}
+
+button {
+    background-color: #1473e6;
+    color: #fff;
+    height: 32px;
+    border-radius: 16px;
+    font-weight: 700;
+    padding: 0px 16px;
+    border: none;
+    font-size: 14px;
+    margin: 20px 0px;
+}
+
+.inform, .register, .emailcheckbox {
+    font-size: 14px;
+    color: #505050;
+}
+
+.emailcheckbox {
+    margin-left: 8px;
+}
+
+.e-check {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin: 20px 0px;
+}
+
