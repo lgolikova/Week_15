@@ -73,6 +73,7 @@ input {
 
 select {
     height: 28px;
+    outline: none;
 }
 
 #country, #day, #month, #year {
@@ -134,12 +135,11 @@ button {
 .e-check {
     display: flex;
     align-items: top;
-    margin: 10px 0px;
+    margin: 10px 0px 3px 0px;
 }
 
 button:hover {
     background-color: #1564c5;
-
 }
 
 
