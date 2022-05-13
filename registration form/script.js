@@ -5,7 +5,6 @@ function checkForm() {
     let password = document.getElementById('password');
     let counter=0;
     
-    
     if (name.value == "") {
         name.style.color = "red";
         name.value = "Введите ваше имя";
@@ -13,7 +12,7 @@ function checkForm() {
     }
     else {
         name.style.color = "black";
-        }
+    }
     if (surname.value == "") {
         surname.style.color = "red";
         surname.value = "Введите вашу фамилию";
@@ -36,13 +35,13 @@ function checkForm() {
         password.value = "Введите пароль";
         password.style.color = "red";  
         counter+=1;
-        }
+    }
     else if (password.value.length <= 6) {
         password.type = "text";
         password.value = "Пароль слишком короткий";
         password.style.color = "red";
         counter+=1;
-        }
+    }
     else {
         password.style.color = "black";
     }
