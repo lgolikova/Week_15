@@ -14,7 +14,6 @@
     background-color: #fff;
     width: 412px;
     height: 591px;
-    /* border: 1px solid; */
     box-shadow: 0 0 0 32px #fff;
 }
 
@@ -135,12 +134,20 @@ button {
 .e-check {
     display: flex;
     align-items: top;
-    margin: 10px 0px 3px 0px;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #1564c5;
 }
+
+input:focus {
+    border-color: #1564c5;
+    color: black;
+    
+}
+
+
 
 
 
