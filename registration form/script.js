@@ -40,14 +40,14 @@ function checkForm() {
         if (password.value == "") {
             password.type = "text";
             password.value = "Введите пароль";
-            password.style.color = "red";
+            password.style.color = "red";  
             counter+=1;
         }
-        else {
-            password.style.color = "black";
+        // else {
+        //     password.style.color = "black";
             
-        }
-        if (password.value.length <= 6) {
+        // }
+        else if (password.value.length <= 6) {
             password.type = "text";
             password.value = "Пароль слишком короткий";
             password.style.color = "red";
