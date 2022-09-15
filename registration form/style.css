@@ -147,6 +147,11 @@ input:focus {
     
 }
 
+#form_error {
+    color: red;
+    font-size: 14px;
+}
+
 
 
 
