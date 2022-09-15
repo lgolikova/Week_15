@@ -5,12 +5,12 @@ function checkForm() {
     let email = document.getElementById('email');
     let password = document.getElementById('password');
     let error = document.getElementById('form_error');
-    
+
     error.innerHTML = '';
     let counter = 0;
 
     let emailFormat = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i; 
-    let passwordFormat = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+    let passwordFormat = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/;
     let nameFormat = /^[а-я ,.'-]+$/i;
     let surnameFormat = /^[а-я ,.'-]+$/i;
 
