@@ -4,60 +4,76 @@ function checkForm() {
     let surname = document.getElementById('surname');
     let email = document.getElementById('email');
     let password = document.getElementById('password');
+    let error = document.getElementById('form_error');
     
-    let error = document.getElementById('form_error')
     error.innerHTML = '';
+    let counter = 0;
 
     let emailFormat = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i; 
-    let passwordFormat = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/;
-
+    let passwordFormat = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+    let nameFormat = /^[а-я ,.'-]+$/i;
+    let surnameFormat = /^[а-я ,.'-]+$/i;
 
 
     if (email.value == '') {
-        error.innerHTML = "Введите адрес электронной почты<br>"
+        error.innerHTML += "Введите адрес электронной почты<br>"
     } else if (!validateEmail(email.value)) {
-        error.innerHTML = "Адрес электронной почты заполнен неверно<br>"
+        error.innerHTML += "Адрес электронной почты заполнен неверно<br>"
+    }
+    else {
+        counter += 1;
     }
     function validateEmail(email) {
         return emailFormat.test(email);
     }
 
+
     if (password.value == '') {
         error.innerHTML += "Введите пароль<br>"
     } else if (!validatePassword(password.value)) {
-        error.innerHTML += "Адрес электронной почты заполнен неверно<br>"
+        error.innerHTML += "Введите надежный пароль<br>"
+    }
+    else {
+        counter += 1;
     }
     function validatePassword(password) {
         return passwordFormat.test(password);
     }
 
 
+    if (name.value == '') {
+        error.innerHTML += "Введите ваше имя<br>"
+    } else if (!validateName(name.value)) {
+        error.innerHTML += "Введите корректное имя<br>"
+    }
+    else {
+        counter += 1;
+    }
+    function validateName(name) {
+        return nameFormat.test(name);
+    }
 
 
-    // let mailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-    // if (email.value.match(mailFormat)) {
-    //     return true;
-    // }
-    // else {
-    //     emailError.innerHTML = 'Ваш адрес электронной почты введен неверно'
-    //     return false;
-    // }
-
-    // let passwordFormat = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/;
-    // else if (password.value.match(passwordFormat)) {
-    //     return true;
-    // }
-    // else {
-    //     passwordError.innerHTML = 'Введите корректный пароль'
-    //     return false;
-    // }
+    if (surname.value == '') {
+        error.innerHTML += "Введите фамилию<br>"
+    } else if (!validateSurname(surname.value)) {
+        error.innerHTML += "Введите корректную фамилию<br>"
+    }
+    else {
+        counter += 1;
+    }
+    function validateSurname(surname) {
+        return surnameFormat.test(surname);
+    }
 
 
-
-
-
+    if (counter==4) {
+        alert (`Добро пожаловать, ${name.value}!`);
+    }
 
 }
+
+
 
 
 // function checkForm() {
